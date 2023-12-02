@@ -1,0 +1,85 @@
+/* Establece el estilo general y el fondo de la página completa */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e6e7e8; /* Ajusta al color de fondo que prefieras */
+}
+
+/* Centra todo el contenido de la aplicación */
+.money-management-app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+}
+
+/* Estilos del botón de volver y home */
+.back-button,
+.home-button {
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid #ccc; /* Color de borde ajustado */
+  background-color: #f0f0f0; /* Color de fondo ajustado */
+}
+
+/* Estilos del botón de calcular */
+.calculate-button {
+  color: white;
+  background-color: #007bff; /* Azul para el botón de calcular */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calculate-button:hover {
+  background-color: #0056b3; /* Oscurecer al pasar el mouse */
+}
+
+/* Estilos del formulario */
+.form-container {
+  background-color: #ffffff; /* Fondo blanco para el formulario */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Espacio antes de la tabla de resultados */
+}
+
+.form-container input,
+.form-container select {
+  border: 1px solid #ced4da; /* Ajusta el color del borde */
+  border-radius: 5px;
+}
+
+/* Estilos de la tabla de resultados */
+.results-container {
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  max-width: 600px; /* Máximo ancho del contenedor de resultados */
+}
+
+.calculation-result {
+  background-color: #f8f9fa; /* Fondo claro para los resultados */
+  border-left: 5px solid #007bff; /* Barra lateral azul para los resultados */
+  padding: 15px;
+  margin-bottom: 10px; /* Espacio entre los resultados */
+}
+
+.calculation-result p {
+  color: #212529; /* Color de texto oscuro para contraste */
+}
+
+/* Footer */
+.money-management-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #343a40; /* Color oscuro para el pie de página */
+  color: #ffffff; /* Texto blanco para el pie de página */
+  padding: 10px 0;
+}

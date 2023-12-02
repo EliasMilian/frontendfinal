@@ -1,0 +1,61 @@
+/* Recommendations.css */
+
+.recommendations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.recommendation-section,
+.user-recommendations-section {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: cadetblue;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.local-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 0;
+}
+
+.local-item h3 {
+  margin: 0.5rem 0;
+}
+
+.local-item p {
+  margin: 0.5rem 0;
+}
+
+.local-item a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Añadir estilos para botones si es necesario */
+
+.recommendations-footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+}
+

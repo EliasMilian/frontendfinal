@@ -1,0 +1,219 @@
+/* Estilos base */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
+  font-family: "Arial", sans-serif; /* Utiliza la fuente Arial para todo */
+} 
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura total del viewport */
+  width: 100vw; /* Ancho total del viewport */
+  overflow-x: hidden; /* Previene el desbordamiento horizontal en el root */
+}
+
+.inicio {
+  flex-grow: 1; /* Permite que el contenedor .inicio crezca para ocupar el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical para todos los elementos */
+  align-items: center; /* Centrado horizontal para todos los elementos */
+  background-color: white; /* Fondo blanco para todo el contenedor */
+}
+
+.inicio-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
+}
+
+.logo img {
+  display: flex;
+  max-width: 15rem; /* Ajusta esto según el tamaño de tu logo */
+  margin: auto;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  position: relative;
+  margin-left: auto; /* Esto empujará los botones a la derecha */
+}
+
+.header-button {
+  background-color: #61dafb; /* Color de fondo para los botones */
+  color: #000000; /* Texto negro para los botones */
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #9adcfb; /* Color más claro al pasar el mouse */
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  border-radius: 2rem;
+  flex-direction: row; /* Alinea horizontalmente */
+}
+
+.slider-container {
+  flex: 1; /* Toma la mitad del espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra el slider horizontalmente */
+  align-items: center; /* Centra el slider verticalmente */
+}
+
+.slider {
+  background-image: url(../../../public/img/fondo1.jpeg);
+  background-size: cover;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 1rem;
+  animation: animate 20s infinite;
+  max-width: 20rem; /* Asegúrate de que la imagen no exceda el contenedor */
+  height: 20rem;
+}
+
+@keyframes animate {
+  20% {
+    background-image: url(../../../public/img/UCA-2.jpeg);
+    background-size: cover;
+  }
+  40% {
+    background-image: url(../../../public/img/fondo2.jpg);
+    background-size: cover;
+  }
+  60% {
+    background-image: url(../../../public/img/fondo6.jpg);
+    background-size: cover;
+  }
+  80% {
+    background-image: url(../../../public/img/fondo3.jpg);
+    background-size: cover;
+  }  
+  100% {
+    background-image: url(../../../public/img/fondo5.jpg);
+    background-size: cover;
+  }
+}
+
+.text-content h1 {
+  color: #007bff; /* Color azul para el título */
+  font-size: 4rem; /* Tamaño más grande para el título */
+  margin-bottom: 0.5rem;
+}
+
+.text-content p {
+  color: #5a5a5a; /* Color gris para el texto */
+  font-size: 1.5rem; /* Tamaño más grande para el texto */
+}
+
+.text-content {
+  flex: 1; /* Toma la mitad del espacio disponible */
+  padding: 2rem;
+}
+
+.footer {
+  background-color: aqua; /* Fondo oscuro para el pie de página */
+  color: white; /* Texto blanco para el pie de página */
+  padding: 1rem 2rem;
+  text-align: center;
+  flex-shrink: 0; /* Asegura que el footer no se reduzca */
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-content h1 {
+    font-size: 3rem; /* Tamaño de fuente más pequeño para el título en tabletas */
+  }
+
+  .text-content p {
+    font-size: 1.25rem; /* Tamaño de fuente más pequeño para el texto en tabletas */
+  }
+
+  .slider {
+    height: 15rem; /* Altura más pequeña para el slider en tabletas */
+    width: 15rem; /* Ancho más pequeño para el slider en tabletas */
+  }
+
+  /* Ajustes adicionales para otros elementos si es necesario */
+}
+
+/* Estilos para teléfonos */
+@media (max-width: 767px) {
+  .inicio-header, .content-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inicio {
+    flex-direction: column;
+  }
+
+  .content-container {
+    padding: 1rem; /* Padding más pequeño para ahorrar espacio */
+    border-radius: 1rem; /* Bordes redondeados más pequeños para la contención */
+  }
+
+  .text-content h1 {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para el título en teléfonos */
+    margin-bottom: 0.25rem;
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Tamaño de fuente más pequeño para el texto en teléfonos */
+  }
+
+  .slider {
+    height: 10rem; /* Altura más pequeña para el slider en teléfonos */
+    width: 100%; /* Ajusta el ancho al 100% para que sea responsive */
+    max-width: none; /* Elimina la restricción de max-width */
+  }
+
+  .header-buttons {
+    position: static;
+    justify-content: center;
+    width: auto; /* Ajusta el ancho automáticamente */
+    gap: 0.25rem; /* Espacio menor entre botones */
+  }
+
+  .header-button {
+    padding: 0.25rem 0.5rem; /* Padding más pequeño para los botones */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para el texto de los botones */
+  }
+
+  .logo img {
+    max-width: 10rem; /* Logo más pequeño en teléfonos */
+  }
+
+  .footer {
+    padding: 0.5rem 1rem; /* Padding más pequeño para el pie de página */
+  }
+
+  /* Puedes añadir ajustes adicionales según sea necesario */
+}
+
+/* No es necesario modificar el media query para max-width: 480px a menos que necesites estilos aún más específicos para dispositivos muy pequeños */

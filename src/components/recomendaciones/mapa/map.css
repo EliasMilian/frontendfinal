@@ -1,0 +1,50 @@
+/* LocationView.css */
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .location-container h1{
+    color: black;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .map-container {
+    width: 60%; /* El mapa ocupa el 60% del ancho de la vista */
+    height: 60%; /* El mapa ocupa el 60% del alto de la vista */
+    margin: auto; /* Centra el contenedor del mapa horizontalmente */
+    position: relative; /* Posicionamiento relativo para centrar verticalmente */
+    top: 25%;
+    transform: translateY(-50%); /* Desplaza el mapa hacia arriba la mitad de su altura */
+  }
+  
+  /* Estilos para el iframe del mapa */
+  .map-container iframe {
+    width: 100%; /* El mapa ocupa el 100% del contenedor .map-container */
+    height: 100%; /* El mapa ocupa el 100% de la altura del contenedor .map-container */
+    border: none; /* Elimina cualquier borde */
+  }
+  
+  .location-footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+  }
+  

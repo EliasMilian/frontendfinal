@@ -1,0 +1,53 @@
+/* Explore.css */
+
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.explore-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.option-card {
+  background-color: #e0e0e0; /* Ajusta este color según tu diseño */
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 1rem;
+  width: 40%; /* O un ancho específico si es necesario */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.manage-money-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.explore-footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+}

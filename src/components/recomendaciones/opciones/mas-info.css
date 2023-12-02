@@ -1,0 +1,75 @@
+/* EstablishmentDetail.css */
+
+.establishment-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.detail-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.description-block,
+.info-block {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 45%; /* Ajustar según el diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-block textarea {
+  width: 100%;
+  height: 100px; /* Ajustar según el diseño */
+  margin-bottom: 1rem;
+}
+
+.user-experiences {
+  margin-top: 1rem;
+}
+
+.info-block h1 {
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.rating {
+  margin: 1rem 0;
+}
+
+.leave-rating-button {
+  display: block;
+  background-color: #61dafb;
+  color: #000;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.establishment-footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+}

@@ -1,0 +1,124 @@
+/* login.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Usa min-height para asegurar que el contenedor se extienda al menos al tamaño de la pantalla */
+  background-color: #fff; /* Fondo blanco para el contenedor */
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.login-logo {
+  position: absolute;
+  top: 42%;
+  left: 64%;
+  transform: translate(-50%, -50%); /* Este transform centra el logo exactamente en el medio de la pantalla */
+  z-index: 10; /* Asegura que el logo esté sobre el formulario */
+}
+
+.login-logo img {
+  max-width: 30%; /* Define un máximo para el ancho del logo */
+  height: auto; /* Asegura que la altura del logo se ajuste automáticamente para mantener la relación de aspecto */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  padding-top: 5rem; /* Añadir padding para evitar que el formulario se superponga con el logo */
+}
+
+.login-form input {
+  width: 20rem; /* Anchura de los campos de texto */
+  padding: 1rem;
+  border: 1px solid #ddd; /* Color del borde de los campos de texto */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 1rem; /* Espacio debajo de cada campo de texto */
+}
+
+.login-form button {
+  width: 30%; /* Anchura más pequeña para el botón */
+  padding: 0.5rem 1rem;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #61dafb; /* Color de fondo del botón */
+  color: #000; /* Color del texto del botón */
+  cursor: pointer;
+  border: none; /* Sin borde */
+}
+
+.login-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Color de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  text-align: center;
+  padding: 1rem; /* Relleno dentro del footer */
+  font-size: 1rem;
+}
+
+/* Media query para tablets */
+@media (max-width: 768px) {
+  .login-logo img {
+    max-width: 90%; /* El logo es más grande en tabletas para mejor visibilidad */
+  }
+
+  .login-logo {
+    position: absolute;
+    top: 42%;
+    left: 54%;
+    transform: translate(-50%, -50%); /* Este transform centra el logo exactamente en el medio de la pantalla */
+    z-index: 10; /* Asegura que el logo esté sobre el formulario */
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 50vw; /* Usa vw para que el ancho de los elementos sea un porcentaje del ancho de la pantalla */
+  }
+}
+
+/* Media query para teléfonos móviles */
+@media (max-width: 480px) {
+  .login-logo img {
+    max-width: 100%; /* El logo es aún más grande en móviles para mejor visibilidad */
+    
+  }
+
+  .login-logo {
+    position: absolute;
+    top: 42%;
+    left: 52%;
+    transform: translate(-50%, -50%); /* Este transform centra el logo exactamente en el medio de la pantalla */
+    z-index: 10; /* Asegura que el logo esté sobre el formulario */
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 70vw; /* Los inputs y botones ocupan más porcentaje del ancho de la pantalla en móviles */
+  }
+
+  .login-form button {
+    padding: 1rem; /* Más padding para que sea más fácil interactuar con el botón */
+  }
+}
+
+/* Media query para PCs y otros dispositivos con pantalla grande */
+@media (min-width: 1224px) {
+  .login-logo img {
+    max-width: 25%; /* El logo puede ser más pequeño en pantallas grandes porque hay más espacio */
+  }
+}
